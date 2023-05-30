@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * A class that models a "hand" of seven cards as an array and allows the user to pick a card and search for it in the hand.
  * To be used as starting code in Exercise.
- * Modified by [Your Name] on [Current Date]
+ * Modified by Harjeet Singh on May 30.2023.
  */
 public class CardTrick {
 
