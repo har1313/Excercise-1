@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * A class that models a "hand" of seven cards as an array and allows the user to pick a card and search for it in the hand.
  * To be used as starting code in Exercise.
- * Modified by Harjeet Singh on May 30,2023
+ * Modified by [Your Name] on [Current Date]
  */
 public class CardTrick {
 
@@ -20,6 +20,12 @@ public class CardTrick {
             card.setSuit(Card.SUITS[random.nextInt(4)]);
             hand[i] = card;
         }
+
+        System.out.println("Cards in hand:");
+        for (Card card : hand) {
+            System.out.println("Value: " + card.getValue() + ", Suit: " + card.getSuit());
+        }
+        System.out.println();
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the value of your card (1-13): ");
