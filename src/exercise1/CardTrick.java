@@ -1,27 +1,24 @@
 package exercise1;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
 /**
- * A class that fills a hand of 7 cards with random Card objects and then asks the user to pick a card.
- * It then searches the list of cards for a match to the user's card.
+ * A class that models a "hand" of seven cards as an array and allows the user to pick a card and search for it in the hand.
  * To be used as starting code in Exercise.
- * Modified by Harjeet Singh on May 30,2023.
+ * Modified by [Your Name] on [Current Date]
  */
 public class CardTrick {
 
     public static void main(String[] args) {
-        List<Card> hand = new ArrayList<>();
+        Card[] hand = new Card[7];
         Random random = new Random();
 
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < hand.length; i++) {
             Card card = new Card();
             card.setValue(random.nextInt(13) + 1);
             card.setSuit(Card.SUITS[random.nextInt(4)]);
-            hand.add(card);
+            hand[i] = card;
         }
 
         Scanner scanner = new Scanner(System.in);
@@ -47,7 +44,7 @@ public class CardTrick {
         if (matchFound) {
             printInfo();
         } else {
-            System.out.println("Sorry, better luck next time.");
+            System.out.println("Sorry, no match found for your card.");
         }
     }
 
